@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Parkour LH</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-loading">
+		<canvas style="position: absolute;"></canvas>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+
+					<section id="main">
+						
+						<header>
+							<span class="logo"><img src="images/avatar.png" alt="Conkrete Logo" /></span>
+							<h1>Conkrete</h1>
+							<p>Association de pratiquants du Parkour Havrais</p>
+						</header>
+						
+						<div id="container">
+						<div id="left"><iframe width="560" height="315" src="https://www.youtube.com/embed/GTy0TDuaSPk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+						<div id="right"><iframe width="560" height="315" src="https://www.youtube.com/embed/FbHN-BgcSBU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+						
+						</div>
+						
+					</section>
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="copyright">
+							<li>Association à loi 1901 pour la pratique sportive du Parkour au Havre (76600) <a href="https://www.journal-officiel.gouv.fr/associations/detail-annonce/associations_b/20190042/1494">Déclaration au journal-officiel</a> | &copy; <a href="https://julienplanchet.com/">Planchet Julien</a></li>
+						</ul>
+					</footer>
+
+			</div>
+			
+		<!-- Scripts -->
+			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
+			<script src="https://unpkg.com/controls-gui@2.0.0"></script>
+			<script src="https://unpkg.com/controls-state@2.0.0"></script>
+			<script src="https://unpkg.com/@agilie/canvas-image-cover-position@1.1.1"></script>
+			<script src="https://unpkg.com/stats.js@0.17.0"></script>
+			<script src="https://unpkg.com/simplex-noise@2.4.0"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-polygon/1.0.3/d3-polygon.min.js"></script>
+			<script src="https://res.cloudinary.com/marcofugaro/raw/upload/v1570116091/d3-delaunay_hkfqs4.js"></script>
+			<script src="assets/js/animation.js"></script>
+
+	</body>
+</html>
