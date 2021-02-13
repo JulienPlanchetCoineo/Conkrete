@@ -1,6 +1,11 @@
 @charset "UTF-8";
 @import url(font-awesome.min.css);
 @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300");
+@font-face {
+	font-family: 'Navarone-Regular';
+	src: url('../fonts/Navarone-Regular.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+	 url('../fonts/Navarone-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
 
 /*
 	Identity by HTML5 UP
@@ -23,6 +28,8 @@
 
 	.title{
 		color:white;
+		font-family: Navarone-Regular;
+		font-size: medium;
 	}
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -993,3 +1000,142 @@
 		body.is-ie #wrapper {
 			height: 100%;
 		}
+
+	.glitch {
+		color: white;
+		font-size: 10rem;
+		width: 40rem;
+		position: relative;
+	}
+
+.glitch::after {
+	content: attr(data-trick);
+	position: absolute;
+	top: 0;
+	left: 0.5rem;
+	color: white;
+	background-color: #0C1016;
+	overflow: hidden;
+	text-shadow: -0.5rem 0 #FF6E48;
+	clip: rect(0, 90rem, 0, 0);
+	animation: noise_title 2s infinite linear alternate-reverse;
+}
+
+.glitch::before {
+	content: attr(data-trick);
+	position: absolute;
+	top: 0;
+	left: -1rem;
+	color: white;
+	background-color: #0C1016;
+	overflow: hidden;
+	text-shadow: 0.3rem 0 #FF6E48;
+	clip: rect(0, 90rem, 0, 0);
+	animation: noise_title 4s infinite linear alternate-reverse;
+}
+
+@keyframes noise_title {
+	0% {
+		clip: rect(5rem, 99.99rem, 11rem, 0);
+	}
+
+	4% {
+		clip: rect(4rem, 99.99rem, 2rem, 0);
+	}
+
+	8% {
+		clip: rect(6rem, 99.99rem, 11rem, 0);
+	}
+
+	12% {
+		clip: rect(12rem, 99.99rem, 5rem, 0);
+	}
+
+	16% {
+		clip: rect(8rem, 99.99rem, 11rem, 0);
+	}
+
+	20% {
+		clip: rect(11rem, 99.99rem, 8rem, 0);
+	}
+
+	24% {
+		clip: rect(2rem, 99.99rem, 7rem, 0);
+	}
+
+	28% {
+		clip: rect(7rem, 99.99rem, 11rem, 0);
+	}
+
+	32% {
+		clip: rect(3rem, 99.99rem, 1rem, 0);
+	}
+
+	36% {
+		clip: rect(8rem, 99.99rem, 2rem, 0);
+	}
+
+	40% {
+		clip: rect(8rem, 99.99rem, 6rem, 0);
+	}
+
+	44% {
+		clip: rect(2rem, 99.99rem, 11rem, 0);
+	}
+
+	48% {
+		clip: rect(4rem, 99.99rem, 4rem, 0);
+	}
+
+	52% {
+		clip: rect(2rem, 99.99rem, 1rem, 0);
+	}
+
+	56% {
+		clip: rect(12rem, 99.99rem, 9rem, 0);
+	}
+
+	60% {
+		clip: rect(6rem, 99.99rem, 7rem, 0);
+	}
+
+	64% {
+		clip: rect(3rem, 99.99rem, 3rem, 0);
+	}
+
+	68% {
+		clip: rect(3rem, 99.99rem, 7rem, 0);
+	}
+
+	72% {
+		clip: rect(7rem, 99.99rem, 8rem, 0);
+	}
+
+	76% {
+		clip: rect(3rem, 99.99rem, 1rem, 0);
+	}
+
+	80% {
+		clip: rect(6rem, 99.99rem, 12rem, 0);
+	}
+
+	84% {
+		clip: rect(5rem, 99.99rem, 5rem, 0);
+	}
+
+	88% {
+		clip: rect(6rem, 99.99rem, 10rem, 0);
+	}
+
+	92% {
+		clip: rect(6rem, 99.99rem, 4rem, 0);
+	}
+
+	96% {
+		clip: rect(4rem, 99.99rem, 2rem, 0);
+	}
+
+	100% {
+		clip: rect(9rem, 99.99rem, 1rem, 0);
+	}
+}
