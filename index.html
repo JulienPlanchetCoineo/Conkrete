@@ -10,43 +10,50 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-loading">
-		<canvas style="position: absolute;"></canvas>
+	<body class="is-loading ">
+		<div class="noise-wrapper">
+			<div class="noise"></div>
+		</div>
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Main -->
+			<!-- Main -->
 
-					<section id="main">
-						
-						<header>
-							<span class="logo"><img src="images/avatar.png" alt="Conkrete Logo" /></span>
-							<h1>Conkrete</h1>
-							<p>Association de pratiquants du Parkour Havrais</p>
-						</header>
-						
-						<div id="container">
+				<section id="main">
+					
+					<header>
+						<span class="logo"><img src="images/avatar.png" alt="Conkrete Logo" /></span>
+						<h1 class="title">Conkrete</h1>
+						<p class="title">Association de pratiquants du Parkour Havrais</p>
+					</header>
+					
+					<div id="container">
 						<div id="left"><iframe width="560" height="315" src="https://www.youtube.com/embed/GTy0TDuaSPk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 						<div id="right"><iframe width="560" height="315" src="https://www.youtube.com/embed/FbHN-BgcSBU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-						
-						</div>
-						
-					</section>
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="copyright">
-							<li>Association à loi 1901 pour la pratique sportive du Parkour au Havre (76600) <a href="https://www.journal-officiel.gouv.fr/associations/detail-annonce/associations_b/20190042/1494">Déclaration au journal-officiel</a> | &copy; <a href="https://julienplanchet.com/">Planchet Julien</a></li>
-						</ul>
-					</footer>
+					</div>
+					
+				</section>
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="copyright">
+						<li>Association à loi 1901 pour la pratique sportive du Parkour au Havre (76600) <a href="https://www.journal-officiel.gouv.fr/associations/detail-annonce/associations_b/20190042/1494">Déclaration au journal-officiel</a> | &copy; <a href="https://julienplanchet.com/">Planchet Julien</a></li>
+					</ul>
+				</footer>
 
-			</div>
-			
+		</div>
 		<!-- Scripts -->
 			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
 			<script>
 				if ('addEventListener' in window) {
 					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+				$(window).on('load', addNoise);
+
+				function addNoise() {
+					$('.noise-wrapper').css('opacity',1);
 				}
 			</script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
